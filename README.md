@@ -1,4 +1,4 @@
-# Acrom
+# ACROM
 ACROM
 
 ** Tools for analysis of Light Curves from CoRoT
@@ -18,3 +18,6 @@ Plotting: This scripts allows to show the graphs of sub light curves generated.
 
 This tools may be utils for treat with chromatic light curves (coming from COROT or other surveys) with purpose to study the  achromatic nature of exoplanetary transits.
 
+# Author
+
+Derian Jesus Dorado Daza

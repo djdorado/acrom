@@ -1,6 +1,6 @@
 # ACROM
-ACROM
 
+ACROM
 ** Tools for analysis of Light Curves from CoRoT **
 
 
@@ -20,4 +20,4 @@ This tools may be utils for treat with chromatic light curves (coming from COROT
 
 # Author
 
-Derian Jesús Dorado-Daza
+Derian Jesús Dorado-Daza (2014)

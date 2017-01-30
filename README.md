@@ -1,7 +1,7 @@
 # ACROM
 ACROM
 
-** Tools for analysis of Light Curves from CoRoT
+** Tools for analysis of Light Curves from CoRoT **
 
 
 A set of python scripts for studing the chromatic COROT Light Curves
@@ -20,4 +20,4 @@ This tools may be utils for treat with chromatic light curves (coming from COROT
 
 # Author
 
-Derian Jesus Dorado Daza
+Derian Jesús Dorado-Daza

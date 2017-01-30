@@ -1,4 +1,4 @@
-# acrom
+# Acrom
 ACROM
 
 ** Tools for analysis of Light Curves from CoRoT

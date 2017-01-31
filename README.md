@@ -1,6 +1,6 @@
 # ACROM
 
-[![Licence](http://img.shields.io/badge/license-GPLv2-blue.svg?style=flat)](https://www.gnu.org/licenses/gpl-3.0.en.html)
+[![Licence](http://img.shields.io/badge/license-GPLv3-blue.svg?style=flat)](https://www.gnu.org/licenses/gpl-3.0.en.html)
 
 ACROM
 ** Tools (Beta version) for analysis of Light Curves from CoRoT **

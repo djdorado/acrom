@@ -18,6 +18,8 @@ Plotting: This scripts allows to show the graphs of sub light curves generated.
 
 This tools may be utils for treat with chromatic light curves (coming from COROT or other surveys) with purpose to study the  achromatic nature of exoplanetary transits.
 
+![](img/Corot 2b_raw.jpg)
+
 # Author
 
 Derian Jesús Dorado-Daza (2014)

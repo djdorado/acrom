@@ -29,4 +29,4 @@ This scripts allows to show the graphs of sub light curves generated.
 
 # Author
 
-Derian Jesús Dorado-Daza (2014)
+Derian Jesús Dorado-Daza (2014). If you have a sugest or observation, please write to derianjesus.dorado@campusviu.es

@@ -1,11 +1,10 @@
 # ACROM
 
 ACROM
-** Tools for analysis of Light Curves from CoRoT **
+** Tools (Beta version) for analysis of Light Curves from CoRoT **
 
 
-A set of python scripts for studing the chromatic COROT Light Curves.
-Contains scripts for filtering, detrending and plotting  the chromatic light curves registered by the COROT Satellite.
+A set of python scripts in beta version for analysis of chromatic COROT Light Curves. Contains functionalities for filtering, detrending and plotting  the chromatic light curves registered by the COROT Satellite.
 This tools may be utils for treat with chromatic light curves (coming from COROT or other surveys) with purpose to study the  achromatic nature of exoplanetary transits.
 
 ### Filtering:

@@ -9,8 +9,8 @@ ACROM
 A set of python scripts in beta version for analysis of chromatic COROT Light Curves. Contains functionalities for filtering, detrending and plotting  the chromatic light curves registered by the COROT Satellite.
 This tools may be utils for treat with chromatic light curves (coming from COROT or other surveys) with purpose to study the  achromatic nature of exoplanetary transits.
 This code was developed as part of thesis "Transitos de exoplanetas con CoRoT en diferentes colores" (Exoplanet´s Transits with CoRoT in different colors) in the Valencian International university (2014).  
-If you use Acrom in your research, please cite:
 
+If you use Acrom in your research, please cite:
 Dorado-Daza, D.J. 2014.Exoplanet´s Transits with CoRoT in different colors .Valencian International university,Valencia,Spain.
 
 ### Filtering:

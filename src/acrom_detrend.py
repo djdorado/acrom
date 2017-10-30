@@ -5,7 +5,7 @@ from numpy import linspace, loadtxt, ones, convolve
 import numpy as numpy
 
 # ***************************************************************************************************************************************************************
-# ===<>=== Astronomia y Astrofisica - VIU 2014 ===<>===
+# ===<>=== Astronomia y Astrofisica - VIU 2014 ===<version 20171025>===
 # Acrom_Detrend: Codigo que aplica Convolucion y Sigma-Clipping para ajuste de las curvas de luz cromaticas y eliminar la tendencia de largo plazo de las curvas.
 # ***************************************************************************************************************************************************************
 

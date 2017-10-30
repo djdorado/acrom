@@ -2,7 +2,7 @@ import fileinput, time
 import numpy as numpy
 
 # ***************************************************************************************************************************************************************
-# ===<*>=== Astronomia y Astrofisica - VIU 2014 ===<v.04122014>===
+# ===<*>=== Astronomia y Astrofisica - VIU 2014 ===<v.20171025>===
 # Acrom_Filter: Codigo para dividir los colores (R,G,B) de lasCurvas de luz CoRoT y filtrar los puntos etiquetados como 'malos' (aquellos con status > 0)
 # ***************************************************************************************************************************************************************
 print ""

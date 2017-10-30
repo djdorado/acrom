@@ -1,31 +1,13 @@
-# ***************************************************************************************************************************************************************
-# ACROM
-# Astronomy and Astrophysics - VIU (Valencian International University) 2014 ===<v.04122014>== Derian Jesus Dorado-Daza
-#
-# This program is free software; you can redistribute it and/or modify
-# it under the terms of the GNU General Public License as published by
-# the Free Software Foundation; either version 2 of the License, or
-# (at your option) any later version.
-#
-# This program is distributed in the hope that it will be useful,
-# but WITHOUT ANY WARRANTY; without even the implied warranty of
-# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-# GNU General Public License for more details.
-#
-# You should have received a copy of the GNU General Public License along
-# with this program; if not, write to the Free Software Foundation, Inc.,
-# 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
-#
-# Acrom_Detrend: Codigo que aplica Convolucion y Sigma-Clipping para ajuste de las curvas de luz cromaticas y eliminar la tendencia de largo plazo de las curvas.
-# ***************************************************************************************************************************************************************
-
-
 from __future__ import division
 import fileinput, time
 from pylab import plot, ylim, xlim, show, xlabel, ylabel, grid
 from numpy import linspace, loadtxt, ones, convolve
 import numpy as numpy
 
+# ***************************************************************************************************************************************************************
+# ===<>=== Astronomia y Astrofisica - VIU 2014 ===<>===
+# Acrom_Detrend: Codigo que aplica Convolucion y Sigma-Clipping para ajuste de las curvas de luz cromaticas y eliminar la tendencia de largo plazo de las curvas.
+# ***************************************************************************************************************************************************************
 
 print ""
 print "==================================================o==================================================="
@@ -84,18 +66,25 @@ mediaredavnorm=numpy.mean(lredavnorm1)
 
 print "=== INICIA Algoritmo Sigma-clipping para curva de luz Roja (R): ==="
 print "Desviacion Estandar (STD) - dataset de la curva de luz Roja (R) =" + str(stdl)
-print "INGRESE valor Sigma para Sigma-clipping (Un rango sugerido para este valor es {0 a 3}):"
+print "INGRESE valor Sigma para Sigma-clipping (Un rango sugerido para este valor es {0 a 3}). 4 para omitir Sigma-Clipping:"
+
+
 sigmaR = float(input())
 # Aplicacion de Sigma Clipping para remocion de puntos
 lcrmin=mediaredavnorm - sigmaR*stdr
 
-
+if sigmaR <= 3: 
 # Asignacion de valores al archivo avred.txt
-for i in range(0,tr):
- if lredavnorm1[i] < lcrmin:
-  av_red.write(str('%s\t') % xr[i+nvalh]) 
-  av_red.write(str('%s\t') % y_avr[i] )
-  av_red.write(str('%s\n') % lredavnorm1[i] )
+ for i in range(0,tr):
+  if lredavnorm1[i] < lcrmin:
+   av_red.write(str('%s\t') % xr[i+nvalh]) 
+   #av_red.write(str('%s\t') % y_avr[i] ) Eliminar comentario si se desea la columna de flujo sin normalizar
+   av_red.write(str('%s\n') % lredavnorm1[i] )
+else:
+ for i in range(0,tr):
+   av_red.write(str('%s\t') % xr[i+nvalh]) 
+   #av_red.write(str('%s\t') % y_avr[i] ) Eliminar comentario si se desea la columna de flujo sin normalizar
+   av_red.write(str('%s\n') % lredavnorm1[i] )
  
 
 # =============== GREEN LC =================#
@@ -132,14 +121,19 @@ sigmaG = float(input())
 # Aplicacion de Sigma Clipping para remocion de puntos
 lcgmin=mediagreenavnorm - sigmaG*stdg
 
+if sigmaG <= 3: 
+# Asignacion de valores al archivo avred.txt
+ for i in range(0,tg):
+  if lgreenavnorm2[i] < lcgmin:
+   av_green.write(str('%s\t') % xg[i+nvalh]) 
+   #av_green.write(str('%s\t') % y_avg[i] ) Eliminar comentario si se desea la columna de flujo sin normalizar
+   av_green.write(str('%s\n') % lgreenavnorm2[i] )
+else:
+ for i in range(0,tg):
+   av_green.write(str('%s\t') % xg[i+nvalh]) 
+   #av_green.write(str('%s\t') % y_avg[i] ) Eliminar comentario si se desea la columna de flujo sin normalizar
+   av_green.write(str('%s\n') % lgreenavnorm2[i] )
 
-
-for i in range(0,tg):
- if lgreenavnorm2[i] < lcgmin:
-  av_green.write(str('%s\t') % xg[i+nvalh]) 
-  av_green.write(str('%s\t') % y_avg[i] )
-  av_green.write(str('%s\n') % lgreenavnorm2[i] )
-  
 
 # =============== BLUE LC =================#
 print "Nombre del archivo de la subcurva de lu azul (P. ej: B__222043.txt):"
@@ -173,14 +167,22 @@ print "INGRESE valor Sigma para Sigma-clipping (Un rango sugerido para este valo
 sigmaB = float(input())
 
 # Aplicacion de Sigma Clipping para remocion de puntos
-lcbmin=mediablueavnorm - sigmaB*stdg
+lcbmin=mediablueavnorm - sigmaB*stdb
+
+if sigmaB <= 3: 
+# Asignacion de valores al archivo avred.txt
+ for i in range(0,tb):
+  if lblueavnorm3[i] < lcbmin:
+   av_blue.write(str('%s\t') % xb[i+nvalh]) 
+   #av_blue.write(str('%s\t') % y_avb[i] ) Eliminar comentario si se desea la columna de flujo sin normalizar
+   av_blue.write(str('%s\n') % lblueavnorm3[i] )
+else:
+ for i in range(0,tb):
+   av_blue.write(str('%s\t') % xb[i+nvalh]) 
+   #av_blue.write(str('%s\t') % y_avb[i] ) Eliminar comentario si se desea la columna de flujo sin normalizar
+   av_blue.write(str('%s\n') % lblueavnorm3[i] )
 
 
-for i in range(0,tb):
- if lblueavnorm3[i] < lcbmin:
-  av_blue.write(str('%s\t') % xb[i+nvalh]) 
-  av_blue.write(str('%s\t') % y_avb[i] )
-  av_blue.write(str('%s\n') % lblueavnorm3[i])
 
 # =============== Resultados =================#
 
@@ -235,5 +237,5 @@ print "3.8.- STD - dataset lgreenavnorm  es:" + str(stdb)
 print "3.9.- Valor - Algoritmo ajuste Sigma-Clipping (lcgmin = Media-n*Sigma) lcrmin es:" + str(lcbmin)
 print "3.10.- Factor de ajuste (n) aplicado - Sigma Clipping = " + str(sigmaB)
 
-print "3.11.- Se ha generado el archivo det_blue.txt que contiene las columnas DateHel, Convolucion de Greenflux, Convolucion_Greenflux Normalizado\n"
+print "3.11.- Se ha generado el archivo det_B_...txt que contiene las columnas DateHel, Convolucion de Blueflux, Convolucion_Blueflux Normalizado\n"
 

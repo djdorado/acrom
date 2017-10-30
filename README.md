@@ -12,7 +12,7 @@ This code was developed as part of thesis "Transitos de exoplanetas con CoRoT en
 
 If you use Acrom in your research, please cite:
 
-Dorado-Daza, D.J. 2014.Exoplanet´s Transits with CoRoT in different colors .Valencian International university,Valencia,Spain.
+Dorado-Daza, D.J. 2014. Exoplanet´s Transits with CoRoT in different colors. Valencian International University, Valencia, Spain.
 
 ### Filtering:
 From a raw COROT light curve in ASCII Format (i.e, corot-2b.txt), this script allows to filter bad points (status > 0) and to generate sub light curves Red (R), Green (G) and Blue (B) in their respective files.

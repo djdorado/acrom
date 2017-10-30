@@ -1,28 +1,10 @@
-# ***************************************************************************************************************************************************************
-# ACROM
-# Astronomy and Astrophysics - VIU 2014 ===<v.04122014>== Derian Jesus Dorado-Daza
-#
-# This program is free software; you can redistribute it and/or modify
-# it under the terms of the GNU General Public License as published by
-# the Free Software Foundation; either version 2 of the License, or
-# (at your option) any later version.
-#
-# This program is distributed in the hope that it will be useful,
-# but WITHOUT ANY WARRANTY; without even the implied warranty of
-# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-# GNU General Public License for more details.
-#
-# You should have received a copy of the GNU General Public License along
-# with this program; if not, write to the Free Software Foundation, Inc.,
-# 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
-#
-# Acrom_Filter: Codigo para dividir los colores (R,G,B) de las Curvas de luz CoRoT y filtrar los puntos etiquetados como 'malos' (aquellos con status > 0)
-# ***************************************************************************************************************************************************************
-
 import fileinput, time
 import numpy as numpy
 
-
+# ***************************************************************************************************************************************************************
+# ===<*>=== Astronomia y Astrofisica - VIU 2014 ===<v.04122014>===
+# Acrom_Filter: Codigo para dividir los colores (R,G,B) de lasCurvas de luz CoRoT y filtrar los puntos etiquetados como 'malos' (aquellos con status > 0)
+# ***************************************************************************************************************************************************************
 print ""
 print "====================================================================================================="
 print "A partir de una curva de luz cruda de CoRoT en formato ASCII sin cabeceras (p.ej: corot-2b.txt)," 
